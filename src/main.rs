@@ -3,5 +3,5 @@ mod chapter_3;
 
 fn main() {
     // chapter_2::app();
-    chapter_3::app();
+    chapter_3::three_one();
 }
