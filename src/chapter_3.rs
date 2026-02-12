@@ -2,7 +2,7 @@ use std::io;
 
 const THREE_HOURS_IN_SECONDS: u32 = 60 * 60 * 3;
 
-pub fn three_one() {
+pub fn sub_1() {
     let mut x = 5;
     println!("This is the value of {x}");
     x = 6;
@@ -28,7 +28,7 @@ pub fn three_one() {
     // spaces_mut = spaces_mut.len(); --> This won't work
 }
 
-pub fn three_two() {
+pub fn sub_2() {
     let x = 92_888;
     let y = 0xff;
     let z = 0o77;
@@ -129,4 +129,30 @@ pub fn index_out_of_array() {
     let element = a[index];
 
     println!("The value of the element at index {index} is: {element}");
+}
+
+pub fn sub_4() {
+    println!("Main Function!");
+    another_fn(32);
+
+    // Statements and Expressions
+    let y: i32 = 32; // This is a statement because it doesn't return a value and it ends with semicolon
+
+    let y = {
+        let x = 6;
+        x + 4 // This is an expression, note the absence of semicolon here.
+    };
+
+    println!("Value of y is {y}");
+
+    let five = five();
+    println!("Value of fn five() is {five}");
+}
+
+fn another_fn(x: i32) {
+    println!("value of x is {x}")
+}
+
+fn five() -> u8 {
+    5 // If you add a semicolon here, the function will return a unit type ()
 }
