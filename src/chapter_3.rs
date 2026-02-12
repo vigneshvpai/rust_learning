@@ -25,3 +25,16 @@ pub fn three_one() {
     // let mut spaces_mut = "     ";
     // spaces_mut = spaces_mut.len(); --> This won't work
 }
+
+pub fn three_two() {
+    let x = 92_888;
+    let y = 0xff;
+    let z = 0o77;
+
+    println!("{x} and {y} and {z}");
+
+    let x = 0b1111_0000;
+    let y = b'#';
+
+    println!("{x} and {y} ");
+}
