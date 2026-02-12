@@ -4,27 +4,32 @@ use std::io;
 use rand::Rng;
 
 pub fn app() {
-    println!("Guess the number!");
-
     let secret_number = rand::thread_rng().gen_range(1..=100);
 
     // println!("The secret number is: {secret_number}");
 
-    println!("Please input your guess: ");
+    println!("Guess the number!");
 
-    let mut guess = String::new();
+    loop {
+        println!("Please input your guess: ");
 
-    io::stdin()
-        .read_line(&mut guess)
-        .expect("Failed to read line!");
+        let mut guess = String::new();
 
-    let guess: u32 = guess.trim().parse().expect("Pleaes type a number");
+        io::stdin()
+            .read_line(&mut guess)
+            .expect("Failed to read line!");
 
-    println!("You guessed: {guess}");
+        let guess: u32 = guess.trim().parse().expect("Pleaes type a number");
 
-    match guess.cmp(&secret_number) {
-        Ordering::Less => println!("Too small!"),
-        Ordering::Equal => println!("You win!"),
-        Ordering::Greater => println!("Too big!"),
+        // println!("You guessed: {guess}");
+
+        match guess.cmp(&secret_number) {
+            Ordering::Less => println!("Too small!"),
+            Ordering::Equal => {
+                println!("You win!");
+                break;
+            }
+            Ordering::Greater => println!("Too big!"),
+        }
     }
 }
