@@ -37,4 +37,52 @@ pub fn three_two() {
     let y = b'#';
 
     println!("{x} and {y} ");
+
+    let x = 2.0;
+    let y: f32 = 3.14;
+
+    println!("{x} and {y} ");
+
+    // addition
+    let sum = 5 + 10;
+
+    // subtraction
+    let difference = 95.5 - 4.3;
+
+    // multiplication
+    let product = 4 * 30;
+
+    // division
+    let quotient = 56.7 / 32.2;
+    let truncated = -5 / 3; // Results in -1
+
+    // remainder
+    let remainder = 43 % 5;
+
+    println!("{sum} & {difference} & {product} & {quotient} & {truncated} & {remainder}");
+
+    let t = true;
+    let f = !t;
+
+    println!("{t} and {f}");
+
+    // Single quotes for char
+    let c = 'z';
+    let z: char = 'ℤ'; // with explicit type annotation
+    let heart_eyed_cat = '😻';
+
+    println!("{c} {z} {heart_eyed_cat}");
+
+    // Compound Types
+    // Tuples
+    let profile = ('V', 28, 171.8);
+    let (x, y, z) = profile;
+    println!("{x} and {y} and {z}");
+
+    let age = profile.1;
+    println!("{age}");
+
+    let unit_value = ();
+
+    let a = [1, 2, 3, 4, 5];
 }
