@@ -1,3 +1,5 @@
+use std::collections::HashMap;
+
 pub fn sub_1() {
     let v: Vec<i32> = Vec::new();
     let v2 = vec![1, 2, 3];
@@ -82,4 +84,17 @@ pub fn sub_2() {
     let s = &hello[0..4];
 
     println!("{s}")
+}
+
+pub fn sub_3() {
+    let mut scores = HashMap::new();
+
+    scores.insert(String::from("Blue"), 10);
+    scores.insert(String::from("Yellow"), 50);
+
+    let team_name = String::from("Blue");
+    let score = match scores.get(&team_name) {
+        Some(&s) => s,
+        None => 0,
+    };
 }
