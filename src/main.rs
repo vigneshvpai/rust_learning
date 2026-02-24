@@ -23,5 +23,6 @@ fn main() {
     // chapter_6::sub_1();
     // chapter_6::sub_2();
     // chapter_6::sub_3();
-    chapter_8::sub_1();
+    // chapter_8::sub_1();
+    chapter_8::sub_2();
 }

@@ -55,3 +55,31 @@ pub fn sub_1() {
         SpreadsheetCell::Float(10.12),
     ];
 }
+
+pub fn sub_2() {
+    let mut s = String::new();
+    let s = "intial_content".to_string();
+    let s = String::from("intial contents");
+
+    let mut s1 = String::from("foo");
+    let s2 = "bar";
+    s1.push_str(s2);
+    println!("s2 is {s2}");
+
+    let mut s = String::from("lo");
+    s.push('l');
+
+    let _s: &str = "hello";
+
+    let s1 = String::from("tic");
+    let s2 = String::from("tac");
+    let s3 = String::from("toe");
+
+    let s = format!("{s1}-{s2}-{s3}");
+
+    let hello = "Здравствуйте";
+
+    let s = &hello[0..4];
+
+    println!("{s}")
+}
