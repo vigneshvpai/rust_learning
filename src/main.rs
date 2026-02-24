@@ -4,10 +4,11 @@
 // mod chapter_5;
 // mod chapter_6;
 // mod chapter_7;
+mod chapter_8;
 
-use crate::garden::vegetables::Asparagus;
+// use crate::garden::vegetables::Asparagus;
 
-mod garden;
+// mod garden;
 
 fn main() {
     // chapter_2::app();
@@ -22,4 +23,5 @@ fn main() {
     // chapter_6::sub_1();
     // chapter_6::sub_2();
     // chapter_6::sub_3();
+    chapter_8::sub_1();
 }
